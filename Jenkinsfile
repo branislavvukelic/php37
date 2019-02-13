@@ -13,14 +13,21 @@ pipeline {
                 sh 'ls'
             }
         }
-        stage('Deploy-Stage') {
+        stage('Deploy: Stage') {
             when { tag "stage-*" }
             steps {
                 echo 'Deploying to stage env because this commit is tagged...'
                 sh 'ls'
             }
         }
-        stage('Deploy-Prod') {
+        stage('Test More') {
+            when { tag "stage-*" }
+            steps {
+                echo 'Doing even more nasty tests...'
+                sh 'ls'
+            }
+        }
+        stage('Deploy: Prod') {
             when { tag "release-*" }
             steps {
                 echo 'Deploying only because this commit is tagged...'
