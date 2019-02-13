@@ -27,6 +27,13 @@ pipeline {
                 sh 'ls'
             }
         }
+        stage('Test Even More') {
+            when { tag "stage-*" }
+            steps {
+                echo 'Doing even even more nasty tests...'
+                sh 'ls'
+            }
+        }
         stage('Deploy: Prod') {
             when { tag "release-*" }
             steps {
