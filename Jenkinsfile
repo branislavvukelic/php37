@@ -31,7 +31,7 @@ pipeline {
             when { tag "release-*" }
             steps {
                 echo 'Deploying only because this commit is tagged...'
-                sh 'ls'
+                sh 'rsync -avz --exclude "Jenkins*" * mrjenkins@172.16.53.203:/sites/php37.rcmteurope.com/public_html/'
             }
         }
     }
