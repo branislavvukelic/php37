@@ -1,4 +1,4 @@
-test2
+prod-deployed
 <?php
 
 // Show all information, defaults to INFO_ALL
