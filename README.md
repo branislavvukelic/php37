@@ -1,2 +1,2 @@
 # php37
-[![Build Status](http://jenkins.rcmteurope.com/buildStatus/icon?job=php37)](http://jenkins.rcmteurope.com/job/php37/)
+[![Build Status](https://jenkins.rcmteurope.com/buildStatus/icon?job=php37)](https://jenkins.rcmteurope.com/job/php37/)
